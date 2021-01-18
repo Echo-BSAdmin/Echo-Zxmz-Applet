@@ -7,18 +7,14 @@
 		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
-		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
-		"coverView": true,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.14.0",
-	"appid": "wx523bde6f082bed13",
-	"projectname": "%E9%A1%B9%E7%9B%AE",
+	"libVersion": "2.4.2",
+	"appid": "wxc9bab8c16d41f924",
+	"projectname": "Zxmz",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
