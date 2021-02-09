@@ -1,0 +1,5 @@
+<!--components/arrowIcon/arrowIcon.wxml-->
+<view class="arrowicon">
+  <view class="arrow arrow-1"></view>
+  <view class="arrow arrow-2"></view>
+</view>

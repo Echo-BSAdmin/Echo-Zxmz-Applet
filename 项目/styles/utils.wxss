@@ -1,0 +1,7 @@
+/* arrow-icon */
+.arrow-icon {
+  position: absolute;
+  width: 100%;
+  height: 54rpx;
+  bottom: 100rpx;
+}

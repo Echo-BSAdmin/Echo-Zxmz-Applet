@@ -1,0 +1,42 @@
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.index {
+  width: 100%;
+  height: 100%;
+}
+
+.index-animation-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.index-animation-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url('http://zxmzappletqiniusave.echobs.cn/index-bg.jpg');
+}
+
+.index-animation-author-name-container {
+  width: 100%;
+  height: 400rpx;
+}
+
+.index-animation-author-name {
+  width: 100%;
+  height: 100%;
+  background-image: url('http://zxmzappletqiniusave.echobs.cn/%E8%89%BA%E6%9C%AF%E7%AD%BE%E5%90%8D.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* index内容实体 */
+.index-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

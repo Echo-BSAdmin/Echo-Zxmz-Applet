@@ -1,17 +1,24 @@
-<cu-custom bgColor="bg-gradual-blue">
-  <view slot="content">ColorUI 空白模板</view>
-</cu-custom>
-<view class="margin-xl padding-xl bg-white radius shadow shadow-lg">
-  <view class="flex justify-center">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='cu-btn round bg-green shadow'> 获取头像昵称 </button>
-    <block wx:else>
-      <view class='text-center'>
-        <view class="cu-avatar xl round solids" style="background-image:url({{userInfo.avatarUrl}})"></view>
-        <view class="padding">{{userInfo.nickName}}</view>
+<view class="index">
+  <cu-custom bgColor="bg-gradual-blue" wx:if="{{!isShowAnimationContainer}}">
+    <view slot="content">赵小萌子</view>
+  </cu-custom>
+  <view class="index-animation-container">
+    <view class="index-animation-bg bg-img bg-mask padding-tb-xl">
+      <view class="index-animation-author-name-container margin-top-xl padding">
+        <view class="index-animation-author-name"></view>
       </view>
-    </block>
+      <arrow-icon class="arrow-icon animation-slide-top animation-reverse" bindtap="nextPage" data-class="slide-top">
+      </arrow-icon>
+    </view>
   </view>
-</view>
-<view class="text-center margin-top">
-  <text class="text-grey text-xl">{{motto}}</text>
+  <view class="index-container">
+    <view class='nav-list'>
+      <navigator open-type="navigate" hover-class='none' url="/pages/basics/{{item.name}}/{{item.name}}"
+        class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key="title">
+        <view class="nav-title">{{item.title}}</view>
+        <view class="nav-name">{{item.name}}</view>
+        <text class='cuIcon-{{item.icon}}'></text>
+      </navigator>
+    </view>
+  </view>
 </view>
