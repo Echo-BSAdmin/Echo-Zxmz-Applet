@@ -1,24 +1,26 @@
 <view class="index">
-  <cu-custom bgColor="bg-gradual-blue" wx:if="{{!isShowAnimationContainer}}">
-    <view slot="content">赵小萌子</view>
-  </cu-custom>
-  <view class="index-animation-container">
-    <view class="index-animation-bg bg-img bg-mask padding-tb-xl">
-      <view class="index-animation-author-name-container margin-top-xl padding">
-        <view class="index-animation-author-name"></view>
-      </view>
-      <arrow-icon class="arrow-icon animation-slide-top animation-reverse" bindtap="nextPage" data-class="slide-top">
-      </arrow-icon>
-    </view>
-  </view>
-  <view class="index-container">
-    <view class='nav-list'>
-      <navigator open-type="navigate" hover-class='none' url="/pages/basics/{{item.name}}/{{item.name}}"
-        class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key="title">
-        <view class="nav-title">{{item.title}}</view>
-        <view class="nav-name">{{item.name}}</view>
-        <text class='cuIcon-{{item.icon}}'></text>
-      </navigator>
-    </view>
-  </view>
+	<cu-custom bgColor="bg-gradual-blue" wx:if="{{!isShowAnimationContainer}}">
+		<view slot="content">赵小萌子</view>
+	</cu-custom>
+	<view class="index-animation-container" wx:if="{{isShowAnimationContainer}}" bindtouchmove="handleTouchMove" animation="{{animationData}}">
+		<view class="index-animation-bg bg-img bg-mask padding-tb-xl">
+			<view class="index-animation-author-name-container margin-top-xl padding">
+				<view class="index-animation-author-name"></view>
+			</view>
+			<arrow-icon class="arrow-icon animation-slide-top animation-reverse" bindtap="nextPage" data-class="slide-top">
+			</arrow-icon>
+		</view>
+		<view class="index-animation-after-container">
+			<image class="fade-image" src="http://zxmzappletqiniusave.echobs.cn/%E4%B8%8B%E6%8B%89%E5%8A%A8%E6%80%81.png" />
+		</view>
+	</view>
+	<view class="index-container margin-top-lg animation-scale-up animation-reverse" wx:if="{{!isShowAnimationContainer}}">
+		<view class='nav-list'>
+			<navigator class="nav-li bg-{{item.color}}" open-type="navigate" hover-class='none' url="/pages/basics/{{item.name}}/{{item.name}}" wx:for="{{elements}}" wx:key="index">
+				<view class="nav-title">{{item.title}}</view>
+				<view class="nav-name">{{item.name}}</view>
+				<text class='cuIcon-{{item.icon}}'></text>
+			</navigator>
+		</view>
+	</view>
 </view>

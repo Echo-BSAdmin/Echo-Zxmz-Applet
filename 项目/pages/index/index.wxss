@@ -6,18 +6,19 @@ page {
 .index {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .index-animation-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 240px);
   overflow: hidden;
 }
 
 .index-animation-bg {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 240px);
   background-image: url('http://zxmzappletqiniusave.echobs.cn/index-bg.jpg');
 }
 
@@ -34,7 +35,17 @@ page {
   background-size: 100% 100%;
 }
 
-/* index内容实体 */
+.index-animation-after-container {
+  width: 100%;
+  height: 240px;
+}
+
+.fade-image {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
 .index-container {
   position: relative;
   width: 100%;
